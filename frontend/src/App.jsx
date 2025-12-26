@@ -1,0 +1,44 @@
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Collection from "./pages/Collection";
+import About from "./pages/About";
+import Contant from "./pages/Contant";
+import Product from "./pages/Product";
+import Cart from "./pages/Cart";
+import PlaceOrder from "./pages/PlaceOrder";
+import Orders from "./pages/Orders";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import SearchBar from "./components/SearchBar";
+import { Toaster } from "react-hot-toast";
+import Verify from "./pages/Verify";
+
+const App = () => {
+  return (
+   <>
+    <div className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+      <Navbar />
+      <SearchBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/collection" element={<Collection />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contant />} />
+        <Route path="/product/:productId" element={<Product />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/place-order" element={<PlaceOrder />} />
+        <Route path="/orders" element={<Orders />} />
+        <Route path="/verify" element={<Verify />} />
+      </Routes>
+     
+      <Toaster/>
+    </div>
+     <Footer />
+   </>
+  );
+};
+
+export default App;
