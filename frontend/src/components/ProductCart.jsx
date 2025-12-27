@@ -12,7 +12,7 @@ const ProductCart = ({ product }) => {
             <img
               src={product.image[0]}
               alt={product.name}
-              className="rounded-l-lg"
+              className="rounded-l-lg h-60 w-full object-cover"
             />
             <p>{product.name.slice(0, 30)}</p>
             <p>
