@@ -10,7 +10,7 @@ const ProductCart = ({ product }) => {
         {product.image && (
           <Link to={`/product/${product._id}`}>
             <img
-              src={product.image}
+              src={product.image[0]}
               alt={product.name}
               className="rounded-l-lg"
             />

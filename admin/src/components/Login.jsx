@@ -24,6 +24,8 @@ const Login = ({ setToken }) => {
       toast.error(error.message)
     }
   };
+  console.log(email,password);
+  
   return (
     <div className="min-h-screen flex items-center justify-center w-full">
       <form
